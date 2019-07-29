@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create the article{% endblock %}
+
+{% block body %}
+    <h1>Create the new article</h1>
+
+    <form method="post" action="{{ path("post_create") }}" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Title</label>
+            <textarea class="form-control" name="title" id="exampleFormControlTextarea1" rows="3">{{ edit.title }}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Content</label>
+            <textarea class="form-control"  name="content" id="exampleFormControlTextarea1" rows="3">{{ edit.content }}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Contents</label>
+            <textarea class="form-control" name="contents" id="exampleFormControlTextarea1" rows="3">{{ edit.contents }}</textarea>
+        </div>
+
+
+        <input class="btn btn-primary" type="submit" value="Update">
+        <a href="{{ path('home') }}" class="btn btn-primary">Back</a>
+    </form>
+
+
+{% endblock %}

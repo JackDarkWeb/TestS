@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block body %}
+
+
+    <div class="col-sm-7 col-sm-offset-1">
+
+        <div class="row">
+            <div class="col-sm-12">
+
+                <h4>{{ post.title }}</h4>
+                <p><strong>{{ post.content }}</strong></p>
+                <br><br>
+                <p>{{ post.contents }}</p>
+            </div>
+        </div>
+        <a href="{{ path('home') }}" class="btn btn-primary">Back</a>
+        <a href="{{ path('edit_post', {'id': post.id}) }}" class="btn btn-primary">Edit</a>
+    </div>
+
+{% endblock %}
